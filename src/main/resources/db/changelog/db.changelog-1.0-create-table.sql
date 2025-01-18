@@ -1,0 +1,6 @@
+CREATE TABLE TICKET (
+    identifier UUID PRIMARY KEY,
+    id VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    status VARCHAR(50) NOT NULL
+);
