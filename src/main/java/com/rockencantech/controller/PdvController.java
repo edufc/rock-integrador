@@ -22,18 +22,17 @@ class PdvController {
 
     @PostMapping("/identify")
     public ResponseEntity<Object> identify(@RequestBody @Valid Customer customer) {
-
         
-        return ResponseEntity.ok(customer);
+        return ResponseEntity.ok(pdvService.identify(customer));
     }
 
     @PostMapping("/authorize")
     public ResponseEntity<Object> authorize(@RequestBody @Valid Ticket ticket) {
-        return ResponseEntity.ok(ticket);
+        return ResponseEntity.ok(pdvService.authorize(ticket));
     }
 
     @PostMapping("/register")
     public ResponseEntity<Object> register(@RequestBody @Valid Ticket ticket) {
-        return ResponseEntity.ok(ticket);
+        return ResponseEntity.ok(pdvService.register(ticket));
     }
 }

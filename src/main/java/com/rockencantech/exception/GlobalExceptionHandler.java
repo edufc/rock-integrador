@@ -50,4 +50,26 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(apiError);
     }
+
+    @ExceptionHandler(IntegrationException.class)
+    public ResponseEntity<ApiError> handleIntegrationExceptions(IntegrationException ex) {
+        ApiError apiError = new ApiError(
+                HttpStatus.BAD_GATEWAY.value(),
+                "Integration Error",
+                ex.getMessage(),
+                null);
+
+        return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(apiError);
+    }
+
+    @ExceptionHandler(ServiceException.class)
+    public ResponseEntity<ApiError> handleServiceExceptions(ServiceException ex) {
+        ApiError apiError = new ApiError(
+                HttpStatus.BAD_REQUEST.value(),
+                "Service Error",
+                ex.getMessage(),
+                null);
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(apiError);
+    }
 }

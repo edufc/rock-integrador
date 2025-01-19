@@ -1,14 +1,13 @@
 package com.rockencantech.service;
 
-import org.springframework.http.ResponseEntity;
-
 import com.rockencantech.dto.Customer;
+import com.rockencantech.dto.Pdv;
 import com.rockencantech.dto.Ticket;
 
 public interface PdvService {
-    void identify(Customer customer);
+    Pdv identify(Customer customer);
 
-    void authorize(Ticket ticket);
+    Pdv authorize(Ticket ticket);
 
-    void register(Ticket ticket);
+    Pdv register(Ticket ticket);
 }
