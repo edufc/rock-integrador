@@ -5,7 +5,15 @@
 - maven
 - docker
 
-## Existe um docker compose file para subir o banco de dados
+# Existe um docker compose file para subir o banco de dados
+
+## Componentes que compoe o projeto
+- autenticação da api que será exposta, considerando JWT fixo
+- validação dos dados da api
+- tratamento de exceção customizado
+- conexão banco de dados com consulta e atualização de registro
+- chamada de api externa, com autenticação e tratamento de exceção
+- log
 
 
 ## Fase 1 - Identificar
