@@ -1,5 +1,6 @@
 # rock-integrador
 
+## pre requisitos para rodar o projeto
 - java 21
 - maven
 - docker
