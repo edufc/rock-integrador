@@ -1,5 +1,9 @@
 # rock-integrador
 
+- java 21
+- maven
+- docker
+
 ## Existe um docker compose file para subir o banco de dados
 
 
