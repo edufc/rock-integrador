@@ -1,5 +1,8 @@
 # rock-integrador
 
+## Existe um docker compose file para subir o banco de dados
+
+
 ## Fase 1 - Identificar
 
 ### exemplo de uma request sucesso
